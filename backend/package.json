@@ -1,0 +1,47 @@
+{
+  "name": "smartplacify-backend",
+  "version": "1.0.0",
+  "description": "Production REST API backend for SmartPlacify Placement Management Platform",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "migrate": "node src/scripts/migrate.js",
+    "seed": "node src/scripts/seed.js",
+    "test": "node src/scripts/testSuite.js",
+    "test:auth": "node src/scripts/testAuth.js",
+    "test:student": "node src/scripts/testStudent.js",
+    "verify:student": "node src/scripts/verifyStudentApi.js",
+    "verify:recruiter": "node src/scripts/verifyRecruiterApi.js",
+    "verify:job": "node src/scripts/verifyJobApi.js",
+    "verify:application": "node src/scripts/verifyApplicationApi.js",
+    "verify:interview": "node src/scripts/verifyInterviewApi.js",
+    "verify:officer": "node src/scripts/verifyPlacementOfficerApi.js",
+    "verify:placement": "node src/scripts/verifyPlacementApi.js",
+    "verify:notification": "node src/scripts/verifyNotificationApi.js"
+  },
+  "keywords": [
+    "smartplacify",
+    "express",
+    "postgresql",
+    "placement-management",
+    "rest-api"
+  ],
+  "author": "SmartPlacify Team",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.13.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

@@ -1,0 +1,72 @@
+export const MOCK_COMPANIES = [
+  {
+    id: 'comp_1',
+    name: 'TechCorp Solutions',
+    logo: 'https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=100&auto=format&fit=crop&q=80',
+    category: 'Product & Consulting',
+    location: 'Bengaluru, Karnataka',
+    website: 'https://techcorp.example.com',
+    industry: 'IT & Software Development',
+    size: '1,000 - 5,000 Employees',
+    rating: 4.8,
+    activeJobsCount: 3,
+    totalHired: 42,
+    description: 'TechCorp Solutions is a leading global technology service provider offering cloud engineering, digital transformation, and enterprise AI software solutions.'
+  },
+  {
+    id: 'comp_2',
+    name: 'TCS (Tata Consultancy Services)',
+    logo: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80',
+    category: 'IT Services Giant',
+    location: 'Pan India (Bengaluru, Hyderabad, Pune, Mumbai)',
+    website: 'https://tcs.com',
+    industry: 'IT Services',
+    size: '500,000+ Employees',
+    rating: 4.2,
+    activeJobsCount: 5,
+    totalHired: 120,
+    description: 'Tata Consultancy Services is an IT services, consulting and business solutions organization that has been partnering with many of the world\'s largest businesses in their transformation journeys.'
+  },
+  {
+    id: 'comp_3',
+    name: 'Deloitte India',
+    logo: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=100&auto=format&fit=crop&q=80',
+    category: 'Management & Tech Consulting',
+    location: 'Hyderabad / Gurugram',
+    website: 'https://deloitte.com',
+    industry: 'Management Consulting',
+    size: '100,000+ Employees',
+    rating: 4.6,
+    activeJobsCount: 2,
+    totalHired: 28,
+    description: 'Deloitte drives impact through audit, consulting, financial advisory, risk management, and tech strategy.'
+  },
+  {
+    id: 'comp_4',
+    name: 'Accenture',
+    logo: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&auto=format&fit=crop&q=80',
+    category: 'Global Services & Digital',
+    location: 'Bengaluru / Pune',
+    website: 'https://accenture.com',
+    industry: 'Technology & Cloud Consulting',
+    size: '700,000+ Employees',
+    rating: 4.4,
+    activeJobsCount: 4,
+    totalHired: 85,
+    description: 'Accenture is a global professional services company with leading capabilities in digital, cloud and security.'
+  },
+  {
+    id: 'comp_5',
+    name: 'Infosys',
+    logo: 'https://images.unsplash.com/photo-1572021335469-31706a17aaef?w=100&auto=format&fit=crop&q=80',
+    category: 'IT Services',
+    location: 'Bengaluru / Mysore',
+    website: 'https://infosys.com',
+    industry: 'IT Services & Consulting',
+    size: '300,000+ Employees',
+    rating: 4.3,
+    activeJobsCount: 3,
+    totalHired: 95,
+    description: 'Infosys is a global leader in next-generation digital services and consulting.'
+  }
+];

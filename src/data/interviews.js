@@ -1,0 +1,50 @@
+export const MOCK_INTERVIEWS = [
+  {
+    id: 'int_1',
+    companyName: 'TechCorp Solutions',
+    companyLogo: 'https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=100&auto=format&fit=crop&q=80',
+    position: 'Software Engineer - Full Stack',
+    round: 'Technical Interview - Round 2',
+    date: '08 Oct 2025',
+    time: '10:30 AM - 11:30 AM (IST)',
+    type: 'Virtual / Google Meet',
+    meetingLink: 'https://meet.google.com/abc-defg-hij',
+    interviewerName: 'Suresh Kumar (Principal Architect)',
+    studentId: 'usr_student_1',
+    studentName: 'Rahul Kumar',
+    status: 'Upcoming',
+    instructions: 'Prepare system design fundamentals, React state management questions, and project walkthrough slides.'
+  },
+  {
+    id: 'int_2',
+    companyName: 'TechCorp Solutions',
+    companyLogo: 'https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=100&auto=format&fit=crop&q=80',
+    position: 'Associate Cloud Engineer',
+    round: 'Cloud Architecture & DevOps Round',
+    date: '10 Oct 2025',
+    time: '02:00 PM - 03:00 PM (IST)',
+    type: 'Virtual / MS Teams',
+    meetingLink: 'https://teams.microsoft.com/l/meetup-join/123456',
+    interviewerName: 'Neha Deshmukh (DevOps Lead)',
+    studentId: 'usr_student_1',
+    studentName: 'Rahul Kumar',
+    status: 'Upcoming',
+    instructions: 'Focus on AWS EC2, S3, IAM, Docker containerization, and basic CI/CD pipeline concepts.'
+  },
+  {
+    id: 'int_3',
+    companyName: 'TCS Digital',
+    companyLogo: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80',
+    position: 'Software Development Engineer 1',
+    round: 'Technical & Coding Round 1',
+    date: '03 Oct 2025',
+    time: '11:00 AM - 12:00 PM (IST)',
+    type: 'Completed',
+    meetingLink: null,
+    interviewerName: 'Vikram Mehta',
+    studentId: 'usr_student_1',
+    studentName: 'Rahul Kumar',
+    status: 'Completed',
+    feedback: 'Excellent problem solving skills. Solved 2/2 medium level array & tree problems.'
+  }
+];
