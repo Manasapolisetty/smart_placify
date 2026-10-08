@@ -29,17 +29,28 @@ const app = express();
 // Security Headers with Helmet
 app.use(helmet());
 
-// CORS Configuration
-const allowedOrigin = process.env.CLIENT_URL || 'http://localhost:5173';
+// CORS Configuration: Supports CORS_ORIGIN or CLIENT_URL (comma-separated origins, trailing slash normalization & local dev)
+const rawOrigins = process.env.CORS_ORIGIN || process.env.CLIENT_URL || 'http://localhost:5173';
+const allowedOrigins = rawOrigins
+  .split(',')
+  .map((url) => url.trim().replace(/\/+$/, ''))
+  .filter(Boolean);
+
+if (!allowedOrigins.includes('http://localhost:5173')) allowedOrigins.push('http://localhost:5173');
+if (!allowedOrigins.includes('http://localhost:3000')) allowedOrigins.push('http://localhost:3000');
+
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (like mobile apps, curl, Postman) or matching frontend
-      if (!origin || origin === allowedOrigin || origin === 'http://localhost:5173') {
-        callback(null, true);
-      } else {
-        callback(new Error('Blocked by CORS policy'));
+      // Allow requests with no origin (like mobile apps, curl, Postman, health checks)
+      if (!origin) {
+        return callback(null, true);
       }
+      const cleanOrigin = origin.replace(/\/+$/, '');
+      if (allowedOrigins.includes(cleanOrigin)) {
+        return callback(null, true);
+      }
+      return callback(new Error(`Blocked by CORS policy: Origin ${origin} is not allowed`));
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
